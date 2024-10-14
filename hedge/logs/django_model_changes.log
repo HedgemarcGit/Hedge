@@ -10998,3 +10998,901 @@ INFO 2024-10-12 21:11:55,693 basehttp "GET /auth/api/transections/ HTTP/1.1" 200
 INFO 2024-10-12 21:11:55,696 basehttp "GET /auth/api/active/plan/ HTTP/1.1" 200 661
 INFO 2024-10-12 21:11:56,020 basehttp "GET /auth/api/transections/ HTTP/1.1" 200 4241
 INFO 2024-10-12 21:11:56,226 basehttp "GET /auth/api/transections/ HTTP/1.1" 200 4241
+WARNING 2024-10-12 21:38:53,925 log Not Found: /.env
+WARNING 2024-10-12 23:07:41,306 log Not Found: /
+WARNING 2024-10-12 23:21:37,839 log Not Found: /.env
+WARNING 2024-10-12 23:21:39,615 log Not Found: /
+WARNING 2024-10-13 02:14:08,372 log Not Found: /
+WARNING 2024-10-13 03:14:25,902 log Not Found: /.git/config
+WARNING 2024-10-13 04:09:51,393 log Not Found: /.env
+WARNING 2024-10-13 04:30:42,185 log Not Found: /
+WARNING 2024-10-13 06:32:39,295 log Not Found: /hello.world
+WARNING 2024-10-13 06:32:39,657 log Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:40,045 log Not Found: /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:40,393 log Not Found: /vendor/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:40,566 log Not Found: /vendor/phpunit/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:41,874 log Not Found: /vendor/phpunit/phpunit/LICENSE/eval-stdin.php
+WARNING 2024-10-13 06:32:42,851 log Not Found: /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:43,197 log Not Found: /phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:44,156 log Not Found: /phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:44,331 log Not Found: /phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:44,795 log Not Found: /phpunit/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:44,979 log Not Found: /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:45,157 log Not Found: /lib/phpunit/phpunit/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:45,339 log Not Found: /lib/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:45,537 log Not Found: /lib/phpunit/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:45,767 log Not Found: /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:45,949 log Not Found: /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:46,125 log Not Found: /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:46,298 log Not Found: /ws/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:46,473 log Not Found: /yii/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:47,723 log Not Found: /zend/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:48,079 log Not Found: /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:48,255 log Not Found: /V2/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:49,457 log Not Found: /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:49,819 log Not Found: /test/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:51,117 log Not Found: /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:51,477 log Not Found: /api/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:52,264 log Not Found: /demo/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:53,022 log Not Found: /cms/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:53,414 log Not Found: /crm/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:54,788 log Not Found: /backup/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:56,499 log Not Found: /blog/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:56,840 log Not Found: /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:57,268 log Not Found: /panel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:57,458 log Not Found: /public/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:57,636 log Not Found: /apps/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:57,812 log Not Found: /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+WARNING 2024-10-13 06:32:57,999 log Not Found: /index.php
+WARNING 2024-10-13 06:32:58,184 log Not Found: /public/index.php
+WARNING 2024-10-13 06:32:59,356 log Not Found: /index.php
+WARNING 2024-10-13 06:32:59,712 log Not Found: /index.php
+WARNING 2024-10-13 06:33:00,048 log Not Found: /containers/json
+WARNING 2024-10-13 06:48:11,423 log Not Found: /
+WARNING 2024-10-13 07:10:19,095 log Not Found: /
+WARNING 2024-10-13 07:33:28,470 log Not Found: /.env
+WARNING 2024-10-13 07:33:30,009 log Not Found: /
+WARNING 2024-10-13 08:24:16,348 log Not Found: /
+WARNING 2024-10-13 09:48:31,517 log Not Found: /
+WARNING 2024-10-13 11:01:27,402 log Not Found: /.env
+WARNING 2024-10-13 11:32:13,112 log Unauthorized: /analytics/trade/alert/
+WARNING 2024-10-13 11:32:13,117 log Unauthorized: /auth/api/me/
+WARNING 2024-10-13 11:32:13,119 log Unauthorized: /analytics/api/open-order/
+WARNING 2024-10-13 11:32:13,120 log Unauthorized: /analytics/trade/alert/
+WARNING 2024-10-13 11:32:13,316 log Unauthorized: /analytics/trade/alert/
+WARNING 2024-10-13 11:32:13,341 log Unauthorized: /auth/api/me/
+WARNING 2024-10-13 11:32:13,345 log Unauthorized: /analytics/trade/alert/
+WARNING 2024-10-13 11:32:13,349 log Unauthorized: /analytics/api/open-order/
+WARNING 2024-10-13 11:32:13,686 log Unauthorized: /auth/api/sign-out/
+WARNING 2024-10-13 11:34:55,126 log Bad Request: /auth/api/active/plan/
+WARNING 2024-10-13 12:43:50,753 log Not Found: /.env
+WARNING 2024-10-13 12:43:52,316 log Not Found: /
+WARNING 2024-10-13 13:03:09,743 log Not Found: /
+WARNING 2024-10-13 13:03:27,941 log Not Found: /robots.txt
+WARNING 2024-10-13 13:03:29,065 log Not Found: /sitemap.xml
+WARNING 2024-10-13 13:03:30,183 log Not Found: /.well-known/security.txt
+WARNING 2024-10-13 13:03:31,225 log Not Found: /favicon.ico
+WARNING 2024-10-13 13:46:08,437 log Not Found: /
+WARNING 2024-10-13 15:27:58,019 log Not Found: /
+ERROR 2024-10-13 17:41:33,156 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:41:48,268 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:41:51,221 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+WARNING 2024-10-13 17:43:30,647 log Bad Request: /auth/api/signin/
+ERROR 2024-10-13 17:44:23,919 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:44:36,971 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:44:51,435 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:45:46,849 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:45:57,705 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:46:23,076 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:46:26,219 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:47:59,069 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:48:01,361 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+ERROR 2024-10-13 17:48:06,595 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+WARNING 2024-10-13 20:10:34,614 log Not Found: /.env
+WARNING 2024-10-13 20:10:35,821 log Not Found: /
+WARNING 2024-10-13 20:10:53,204 log Not Found: /upload
+WARNING 2024-10-13 20:10:55,130 log Not Found: /uploads
+WARNING 2024-10-13 22:01:06,769 log Not Found: /
+WARNING 2024-10-13 22:56:13,525 log Not Found: /.env
+WARNING 2024-10-13 22:56:14,177 log Not Found: /
+WARNING 2024-10-13 23:37:50,939 log Not Found: /
+WARNING 2024-10-14 00:59:57,994 log Not Found: /.env
+WARNING 2024-10-14 00:59:59,193 log Not Found: /
+WARNING 2024-10-14 01:13:21,505 log Not Found: /ReportServer
+WARNING 2024-10-14 02:45:24,057 log Not Found: /
+WARNING 2024-10-14 03:14:13,953 log Not Found: /
+WARNING 2024-10-14 04:10:34,095 log Not Found: /
+WARNING 2024-10-14 04:24:04,737 log Not Found: /
+WARNING 2024-10-14 05:15:39,742 log Not Found: /
+WARNING 2024-10-14 05:21:44,770 log Not Found: /.env
+WARNING 2024-10-14 05:24:41,844 log Not Found: /.env
+WARNING 2024-10-14 05:38:46,032 log Not Found: /api/user/login
+WARNING 2024-10-14 05:39:17,986 log Not Found: /actuator/gateway/routes
+WARNING 2024-10-14 05:40:51,957 log Not Found: /.env
+WARNING 2024-10-14 06:07:31,331 log Not Found: /.env
+WARNING 2024-10-14 06:07:32,866 log Not Found: /
+WARNING 2024-10-14 06:54:33,618 log Not Found: /
+WARNING 2024-10-14 06:54:33,642 log Not Found: /
+WARNING 2024-10-14 06:57:01,332 log Not Found: /.env
+WARNING 2024-10-14 07:08:34,568 log Not Found: /
+WARNING 2024-10-14 07:08:38,909 log Not Found: /
+WARNING 2024-10-14 07:08:43,359 log Not Found: /
+WARNING 2024-10-14 07:08:48,182 log Not Found: /WuEL
+WARNING 2024-10-14 07:08:57,429 log Not Found: /a
+WARNING 2024-10-14 07:09:01,613 log Not Found: /download/file.ext
+WARNING 2024-10-14 07:09:06,917 log Not Found: /SiteLoader
+WARNING 2024-10-14 07:09:11,643 log Not Found: /mPlayer
+WARNING 2024-10-14 07:21:03,165 log Unsupported Media Type: /analytics/trade/alert/
+WARNING 2024-10-14 07:21:03,287 log Unsupported Media Type: /analytics/trade/alert/
+WARNING 2024-10-14 07:53:58,015 log Not Found: /RDWeb/Pages/
+WARNING 2024-10-14 08:15:23,759 log Not Found: /login
+WARNING 2024-10-14 08:22:52,241 log Not Found: /
+WARNING 2024-10-14 08:24:51,292 log Not Found: /
+WARNING 2024-10-14 09:32:32,241 log Not Found: /
+WARNING 2024-10-14 10:11:45,648 log Not Found: /
+WARNING 2024-10-14 10:40:53,443 log Not Found: /
+WARNING 2024-10-14 10:46:49,346 log Not Found: /
+WARNING 2024-10-14 10:51:45,603 log Not Found: /webui/
+WARNING 2024-10-14 11:09:03,341 log Unsupported Media Type: /analytics/trade/alert/
+WARNING 2024-10-14 11:09:03,345 log Unsupported Media Type: /analytics/trade/alert/
+WARNING 2024-10-14 12:38:52,093 log Not Found: /
+WARNING 2024-10-14 13:00:44,433 log Not Found: /_profiler/phpinfo
+WARNING 2024-10-14 13:03:23,598 log Not Found: /
+WARNING 2024-10-14 13:05:31,926 log Not Found: /.env
+WARNING 2024-10-14 13:05:33,622 log Not Found: /
+WARNING 2024-10-14 13:07:53,751 log Not Found: /.env
+WARNING 2024-10-14 13:14:48,037 log Not Found: /aaa9
+WARNING 2024-10-14 13:14:55,449 log Not Found: /aab8
+WARNING 2024-10-14 13:15:02,017 log Not Found: /
+WARNING 2024-10-14 13:43:27,735 log Not Found: /.env
+WARNING 2024-10-14 14:56:20,904 log Not Found: /
+INFO 2024-10-14 15:50:17,033 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 15:52:38,411 basehttp "OPTIONS /auth/api/signin/ HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:39,452 basehttp "POST /auth/api/signin/ HTTP/1.1" 200 30
+INFO 2024-10-14 15:52:44,808 basehttp "POST /auth/api/signin/ HTTP/1.1" 200 602
+INFO 2024-10-14 15:52:45,097 basehttp "OPTIONS /auth/api/me/ HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:45,326 basehttp "OPTIONS /analytics/trade/alert/?market=&timeFrame= HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:45,571 basehttp "OPTIONS /analytics/trade/alert/ HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:45,814 basehttp "OPTIONS /analytics/trade/alert/?market=&timeFrame= HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:45,815 basehttp "OPTIONS /analytics/api/open-order/?status=Active&market=&imeFrame= HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:45,868 basehttp "OPTIONS /analytics/trade/alert/ HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:45,880 basehttp "OPTIONS /auth/api/me/ HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:45,883 basehttp "OPTIONS /analytics/api/open-order/?status=Active&market=&imeFrame= HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:45,883 basehttp "GET /auth/api/me/ HTTP/1.1" 200 76
+INFO 2024-10-14 15:52:46,115 basehttp "GET /analytics/trade/alert/ HTTP/1.1" 200 205638
+INFO 2024-10-14 15:52:46,160 basehttp "GET /auth/api/me/ HTTP/1.1" 200 76
+INFO 2024-10-14 15:52:46,161 basehttp "GET /analytics/trade/alert/?market=&timeFrame= HTTP/1.1" 200 205638
+INFO 2024-10-14 15:52:46,163 basehttp "GET /analytics/api/open-order/?status=Active&market=&imeFrame= HTTP/1.1" 200 12
+INFO 2024-10-14 15:52:46,775 basehttp "GET /analytics/trade/alert/ HTTP/1.1" 200 205638
+INFO 2024-10-14 15:52:47,371 basehttp "OPTIONS /analytics/trade/alert/?market=Binance&timeFrame=3M HTTP/1.1" 200 0
+INFO 2024-10-14 15:52:47,416 basehttp "GET /analytics/trade/alert/?market=&timeFrame= HTTP/1.1" 200 205638
+INFO 2024-10-14 15:52:48,097 basehttp "GET /analytics/api/open-order/?status=Active&market=&imeFrame= HTTP/1.1" 200 12
+INFO 2024-10-14 15:52:49,023 basehttp "GET /analytics/trade/alert/?market=Binance&timeFrame=3M HTTP/1.1" 200 29902
+INFO 2024-10-14 15:53:08,817 basehttp "OPTIONS /auth/api/sign-out/ HTTP/1.1" 200 0
+INFO 2024-10-14 15:53:09,069 basehttp "POST /auth/api/sign-out/ HTTP/1.1" 204 36
+WARNING 2024-10-14 15:55:15,011 log Unauthorized: /auth/api/me/
+WARNING 2024-10-14 15:55:15,012 basehttp "GET /auth/api/me/ HTTP/1.1" 401 58
+WARNING 2024-10-14 15:55:15,283 log Unauthorized: /auth/api/sign-out/
+WARNING 2024-10-14 15:55:15,283 basehttp "POST /auth/api/sign-out/ HTTP/1.1" 401 183
+WARNING 2024-10-14 16:16:46,112 log Not Found: /
+WARNING 2024-10-14 18:15:52,019 log Not Found: /autodiscover/autodiscover.json
+WARNING 2024-10-14 19:08:19,485 log Not Found: /.env
+WARNING 2024-10-14 19:08:20,419 log Not Found: /
+WARNING 2024-10-14 19:19:40,594 log Not Found: /.env
+WARNING 2024-10-14 19:19:42,362 log Not Found: /
+INFO 2024-10-14 19:35:05,433 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 19:35:06,608 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 19:35:17,211 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 19:35:18,339 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 19:39:12,864 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 19:39:13,983 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 19:40:18,776 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 19:40:19,913 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 19:40:21,311 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 19:40:22,480 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 19:40:59,664 autoreload /home/ubuntu/Hedge/hedge/authmodule/urls.py changed, reloading.
+INFO 2024-10-14 19:41:00,807 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 19:41:33,897 autoreload /home/ubuntu/Hedge/hedge/authmodule/urls.py changed, reloading.
+INFO 2024-10-14 19:41:35,016 autoreload Watching for file changes with StatReloader
+ERROR 2024-10-14 19:43:54,561 log Internal Server Error: /auth/api/signin/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 518, in thread_handler
+    raise exc_info[1]
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 468, in __call__
+    ret = await asyncio.shield(exec_coro)
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/asgiref/sync.py", line 522, in thread_handler
+    return func(*args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 192, in post
+    UserActivePlan.objects.update_expired_plans_for_user(user)
+  File "/home/ubuntu/Hedge/hedge/authmodule/models.py", line 74, in update_expired_plans_for_user
+    if not user.is_superuser:
+AttributeError: 'NoneType' object has no attribute 'is_superuser'
+WARNING 2024-10-14 19:45:21,006 log Bad Request: /analytics/trade/alert/
+INFO 2024-10-14 19:59:24,325 basehttp "OPTIONS /auth/api/forget-password/ HTTP/1.1" 200 0
+ERROR 2024-10-14 19:59:24,560 log Internal Server Error: /auth/api/forget-password/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 391, in post
+    email = request.data.get('email').lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+ERROR 2024-10-14 19:59:24,561 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 500 94983
+INFO 2024-10-14 20:01:30,004 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:01:31,158 autoreload Watching for file changes with StatReloader
+ERROR 2024-10-14 20:01:40,402 log Internal Server Error: /auth/api/forget-password/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 392, in post
+    email = request.data.get('email').lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+ERROR 2024-10-14 20:01:40,403 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 500 94902
+INFO 2024-10-14 20:02:42,204 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:02:43,369 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:02:44,762 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:02:45,927 autoreload Watching for file changes with StatReloader
+ERROR 2024-10-14 20:02:59,761 log Internal Server Error: /auth/api/forget-password/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 395, in post
+    print(email, password)
+NameError: name 'password' is not defined
+ERROR 2024-10-14 20:02:59,762 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 500 95304
+INFO 2024-10-14 20:03:24,214 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:03:25,356 autoreload Watching for file changes with StatReloader
+WARNING 2024-10-14 20:03:45,273 log Bad Request: /auth/api/forget-password/
+WARNING 2024-10-14 20:03:45,273 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 400 35
+INFO 2024-10-14 20:04:17,977 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:04:19,137 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:04:24,616 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:04:25,751 autoreload Watching for file changes with StatReloader
+WARNING 2024-10-14 20:04:31,568 log Bad Request: /auth/api/forget-password/
+WARNING 2024-10-14 20:04:31,568 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 400 35
+INFO 2024-10-14 20:05:11,227 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:05:12,381 autoreload Watching for file changes with StatReloader
+WARNING 2024-10-14 20:05:20,141 log Bad Request: /auth/api/forget-password/
+WARNING 2024-10-14 20:05:20,142 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 400 35
+INFO 2024-10-14 20:05:39,440 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:05:40,606 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:05:41,999 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:05:43,140 autoreload Watching for file changes with StatReloader
+WARNING 2024-10-14 20:05:48,193 log Bad Request: /auth/api/forget-password/
+WARNING 2024-10-14 20:05:48,193 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 400 35
+WARNING 2024-10-14 20:07:30,683 log Bad Request: /auth/api/forget-password/
+WARNING 2024-10-14 20:07:30,683 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 400 35
+INFO 2024-10-14 20:08:21,116 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:08:22,300 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:08:42,109 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:08:43,287 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:09:17,117 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:09:18,225 autoreload Watching for file changes with StatReloader
+WARNING 2024-10-14 20:09:26,262 log Bad Request: /auth/api/forget-password/
+WARNING 2024-10-14 20:09:26,262 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 400 35
+INFO 2024-10-14 20:10:17,131 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 30
+INFO 2024-10-14 20:11:39,775 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 483
+INFO 2024-10-14 20:12:05,246 basehttp "OPTIONS /auth/api/change-password/ HTTP/1.1" 200 0
+WARNING 2024-10-14 20:12:05,544 log Unauthorized: /auth/api/change-password/
+WARNING 2024-10-14 20:12:05,544 basehttp "POST /auth/api/change-password/ HTTP/1.1" 401 58
+INFO 2024-10-14 20:14:36,721 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 30
+INFO 2024-10-14 20:14:40,221 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 483
+WARNING 2024-10-14 20:14:49,524 log Unauthorized: /auth/api/change-password/
+WARNING 2024-10-14 20:14:49,524 basehttp "POST /auth/api/change-password/ HTTP/1.1" 401 58
+ERROR 2024-10-14 20:21:33,863 log Internal Server Error: /auth/api/forget-password/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 366, in post
+    email = request.data['formData'].get('email').lower()
+KeyError: 'formData'
+ERROR 2024-10-14 20:21:33,864 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 500 94606
+INFO 2024-10-14 20:22:03,469 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:22:04,601 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:22:11,094 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:22:12,223 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:22:14,269 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 30
+INFO 2024-10-14 20:22:18,785 basehttp "OPTIONS /auth/api/verify-otp/ HTTP/1.1" 200 0
+INFO 2024-10-14 20:22:18,998 basehttp "POST /auth/api/verify-otp/ HTTP/1.1" 201 42
+INFO 2024-10-14 20:22:29,429 basehttp "POST /auth/api/verify-otp/ HTTP/1.1" 201 42
+INFO 2024-10-14 20:23:02,082 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 30
+INFO 2024-10-14 20:23:06,348 basehttp "POST /auth/api/verify-otp/ HTTP/1.1" 201 42
+INFO 2024-10-14 20:23:42,106 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 483
+ERROR 2024-10-14 20:23:49,612 log Internal Server Error: /auth/api/change-password/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 422, in post
+    if user is not None:
+NameError: name 'user' is not defined
+ERROR 2024-10-14 20:23:49,613 basehttp "POST /auth/api/change-password/ HTTP/1.1" 500 95582
+INFO 2024-10-14 20:24:10,582 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:24:11,744 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:24:12,960 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:24:14,075 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:24:20,391 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:24:21,528 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:24:22,922 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:24:24,074 autoreload Watching for file changes with StatReloader
+ERROR 2024-10-14 20:24:26,195 log Internal Server Error: /auth/api/change-password/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 425, in post
+    if otp_input is not None:
+NameError: name 'otp_input' is not defined
+ERROR 2024-10-14 20:24:26,196 basehttp "POST /auth/api/change-password/ HTTP/1.1" 500 95771
+INFO 2024-10-14 20:24:42,955 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:24:44,094 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:24:47,525 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:24:48,666 autoreload Watching for file changes with StatReloader
+ERROR 2024-10-14 20:24:52,564 log Internal Server Error: /auth/api/change-password/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 425, in post
+    otp_instance = OTP.objects.filter(user=user, otp=otp_input).first()
+NameError: name 'otp_input' is not defined
+ERROR 2024-10-14 20:24:52,565 basehttp "POST /auth/api/change-password/ HTTP/1.1" 500 95877
+INFO 2024-10-14 20:25:39,252 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:25:40,423 autoreload Watching for file changes with StatReloader
+ERROR 2024-10-14 20:25:55,035 log Internal Server Error: /auth/api/change-password/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 430, in post
+    if (otp_instance.is_valid() and not otp_instance.is_verified):
+AttributeError: 'NoneType' object has no attribute 'is_valid'
+ERROR 2024-10-14 20:25:55,036 basehttp "POST /auth/api/change-password/ HTTP/1.1" 500 96594
+INFO 2024-10-14 20:26:06,537 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 30
+INFO 2024-10-14 20:26:15,609 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 483
+ERROR 2024-10-14 20:26:22,637 log Internal Server Error: /auth/api/change-password/
+Traceback (most recent call last):
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ubuntu/Hedge/hedgenv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ubuntu/Hedge/hedge/authmodule/views.py", line 430, in post
+    if (otp_instance.is_valid() and not otp_instance.is_verified):
+AttributeError: 'NoneType' object has no attribute 'is_valid'
+ERROR 2024-10-14 20:26:22,640 basehttp "POST /auth/api/change-password/ HTTP/1.1" 500 96594
+INFO 2024-10-14 20:27:16,210 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:27:17,389 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:27:20,840 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:27:22,008 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:27:28,523 autoreload /home/ubuntu/Hedge/hedge/authmodule/views.py changed, reloading.
+INFO 2024-10-14 20:27:29,693 autoreload Watching for file changes with StatReloader
+INFO 2024-10-14 20:27:35,256 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 30
+INFO 2024-10-14 20:27:38,852 basehttp "POST /auth/api/forget-password/ HTTP/1.1" 200 483
+INFO 2024-10-14 20:27:44,777 basehttp "POST /auth/api/change-password/ HTTP/1.1" 200 42

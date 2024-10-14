@@ -8,6 +8,11 @@ urlpatterns = [
     path('api/signup/', SignUpView.as_view(), name='signup'),
     path('api/verify-otp/', VerifyOTPView.as_view(), name='verify-otp'),
     path('api/signin/', SignInView.as_view(), name='sign-in'),
+
+    path('api/forget-password/', ForgetPasswordView.as_view(), name='forget_password'),
+    path('api/change-password/', ChangePasswordView.as_view(), name='change_password'),
+
+
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name ='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/sign-out/', LogoutView.as_view(), name='logout'),

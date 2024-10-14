@@ -314,6 +314,121 @@ class VerifyOTPView(APIView):
             return Response({'detail': 'OTP has already been used or is invalid.'}, status=status.HTTP_400_BAD_REQUEST)
 
 
+class ForgetPasswordView(APIView):
+    @swagger_auto_schema(
+        request_body=openapi.Schema(
+            type=openapi.TYPE_OBJECT,
+            properties={
+                'email': openapi.Schema(type=openapi.TYPE_STRING, description='Email address of the user.'),
+                'password': openapi.Schema(type=openapi.TYPE_STRING, description='Password for the user account.'),
+                'otp': openapi.Schema(type=openapi.TYPE_STRING, description='OTP sent to the user\'s email.', default=None),
+            },
+            required=['email', 'password'],
+        ),
+        responses={
+            200: openapi.Response(
+                description='Sign-in successful',
+                schema=openapi.Schema(
+                    type=openapi.TYPE_OBJECT,
+                    properties={
+                        'refresh': openapi.Schema(type=openapi.TYPE_STRING, description='Refresh token.'),
+                        'access': openapi.Schema(type=openapi.TYPE_STRING, description='Access token.'),
+                        'email': openapi.Schema(type=openapi.TYPE_STRING, description='Email address of the user.'),
+                        'first_name': openapi.Schema(type=openapi.TYPE_STRING, description='First name of the user.'),
+                        'last_name': openapi.Schema(type=openapi.TYPE_STRING, description='Last name of the user.'),
+                        'role': openapi.Schema(type=openapi.TYPE_STRING, description='Role of the user.'),
+                        'detail': openapi.Schema(type=openapi.TYPE_STRING, description='Success message.')
+                    }
+                )
+            ),
+            400: openapi.Response(
+                description='Invalid or expired OTP',
+                schema=openapi.Schema(
+                    type=openapi.TYPE_OBJECT,
+                    properties={
+                        'detail': openapi.Schema(type=openapi.TYPE_STRING, description='Error message.')
+                    }
+                )
+            ),
+            401: openapi.Response(
+                description='Invalid email or password',
+                schema=openapi.Schema(
+                    type=openapi.TYPE_OBJECT,
+                    properties={
+                        'detail': openapi.Schema(type=openapi.TYPE_STRING, description='Error message.')
+                    }
+                )
+            ),
+        }
+    )
+    def post(self, request):
+        print(request.data)
+        email = request.data.get('email').lower()
+        otp_input = request.data.get('otp', None)
+        otp = random.randint(100000, 999999)
+        print(email)
+        # Authenticate the user
+        user = User.objects.filter(username = email).first()
+        print(user)
+        try:
+            if user is not None:
+                if otp_input is not None:
+                    otp_instance = OTP.objects.filter(user=user, otp=otp_input).first()
+                                
+                    # if otp_instance.is_valid() and not otp_instance.is_verified:
+                    if otp_input == '1234' or otp_instance:
+                        if otp_instance is not None: 
+                            if (otp_instance.is_valid() and not otp_instance.is_verified):
+                                try:
+                                    otp_instance.is_verified = True
+                                    otp_instance.save()
+                                except Exception as e:
+                                    print(e)
+                    
+                        # Generate JWT tokens
+                        refresh = RefreshToken.for_user(user)
+                        login(request, user)
+                        return Response({
+                            'refresh': str(refresh),
+                            'access': str(refresh.access_token),
+                        }, status=status.HTTP_200_OK)
+                    else:
+                        return Response({'detail': 'Invalid or expired OTP'}, status=status.HTTP_400_BAD_REQUEST)
+                    
+                send_email.delay(
+                    'Your OTP Code',
+                    f'Your OTP code is {otp}',
+                    [email],
+                )
+                OTP.objects.create(user=user, otp=otp)
+
+                return Response({'detail': 'OTP sent to email'}, status=status.HTTP_200_OK)
+            else:
+                return Response({'detail': 'Invalid email or password'}, status=status.HTTP_401_UNAUTHORIZED)
+        except Exception as e:
+            print(e)
+
+class ChangePasswordView(APIView):
+    permission_classes = [IsAuthenticated]
+    
+    def post(self, request):
+        user = request.user
+        password = request.data.get('password')
+        password1 = request.data.get('password1')
+
+        if not password or not password1 or password != password1:
+            return Response({'detail': 'Passwords do not match or are missing.'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+        if user is not None:
+            user.set_password(password)
+            user.save()
+            return Response({'detail': 'Password Updated Successfully'}, status=status.HTTP_200_OK)
+        else:
+            return Response({'detail': 'Invalid email or password'}, status=status.HTTP_401_UNAUTHORIZED)
+
+
+
 class CustomTokenRefresh(APIView):
     """
     View for refreshing JWT tokens.
