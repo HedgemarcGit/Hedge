@@ -2,6 +2,14 @@
 from django.contrib import admin
 from .models import *
 
+from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
+
+admin.site.site_header = "Hedge+"
+admin.site.site_title = "Hedge+"
+admin.site.index_title = "Hedge+"
+
+
 class ModelLogAdmin(admin.ModelAdmin):
     list_display = ('model_name', 'action', 'user', 'timestamp')  # Fields to display in the list view
     list_filter = ('action', 'model_name', 'user', 'timestamp')  # Filters for the sidebar
@@ -42,3 +50,17 @@ class CouponAdmin(admin.ModelAdmin):
     list_filter = ('status', 'plan')  # Filters for the admin list view
 
 admin.site.register(Coupon, CouponAdmin)
+
+
+@admin.register(SubscriptionButtonClicked)
+class SubscriptionButtonClickedAdmin(admin.ModelAdmin):
+    list_display = ('user', 'plan', 'count')  # Customize fields shown in list view
+    search_fields = ('user__username', 'plan__name')  # Enable search functionality
+    list_filter = ('plan',)  # Add filter for the plans
+
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'mobile_no', 'created_at')  # Columns to display in the admin list view
+    search_fields = ( 'mobile_no',)  # Fields that can be searched
+    list_filter = ( 'mobile_no',)  # Filters for the admin list view

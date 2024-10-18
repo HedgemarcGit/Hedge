@@ -19,6 +19,12 @@ class UserSerializer(serializers.ModelSerializer):
         )
         return user
 
+class ProfileSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
+    class Meta:
+        model = Profile
+        fields = '__all__'
+
 class PlanSerializer(serializers.ModelSerializer):
     class Meta:
         model = Plan

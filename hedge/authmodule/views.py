@@ -578,9 +578,51 @@ class UserData(APIView):
     def get(self, request):
         # Serialize authenticated user data
         user = request.user
-        serializer = UserSerializer(user)
+        profile = Profile.objects.filter(user = user).first()
+        serializer = ProfileSerializer(profile, many = False)
+        print(serializer)
+        orders = Orders.objects.filter(status='Active', user = user).order_by('-created_at')
+        openorders = OpenOrders.objects.filter(status='Active', user = request.user).all()
+
+        total_risk_value = 0.0
         
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        for order in orders:
+            try:
+                # Attempt to convert risk_value to float
+                risk = float(order.risk_value)
+            except (ValueError, TypeError):
+                # Handle invalid values (e.g., non-numeric strings, None)
+                risk = 0.0
+            
+            total_risk_value += risk
+
+        total_open_risk_value = 0.0
+        
+        for order in openorders:
+            try:
+                # Attempt to convert risk_value to float
+                risk = float(order.risk_value)
+            except (ValueError, TypeError):
+                # Handle invalid values (e.g., non-numeric strings, None)
+                risk = 0.0
+            
+            total_open_risk_value += risk
+
+        long_orders_count = Orders.objects.filter(long_or_short='Long', status='Active', user = user).count()
+
+        # Count the number of Short orders
+        short_orders_count = Orders.objects.filter(long_or_short='Short', status='Active', user = user).count()
+
+        response_data = {
+            'profile': serializer.data,  # Serialized profile data
+            'total_risk_value': total_risk_value,  # Total risk value for active orders
+            'total_open_risk_value': total_open_risk_value,  # Total risk value for active open orders
+            'long_orders_count': long_orders_count,  # Count of active Long orders
+            'short_orders_count': short_orders_count,  # Count of active Short orders
+            'available_risk_value' : total_risk_value - total_open_risk_value
+        }
+
+        return Response(response_data, status=status.HTTP_200_OK)
 
     def post(self, request):
         user = request.user  # Authenticated user
@@ -898,7 +940,7 @@ class ActivePlanCreateView(APIView):
             'user': user.id,  # Assuming user is already authenticated
             'transactions_id': '',
             'status': 'Active',
-            'start_data': start_date,  # Current date and time
+            'start_date': start_date,  # Current date and time
             'end_date': end_date,      # 1 month from now
         }
 

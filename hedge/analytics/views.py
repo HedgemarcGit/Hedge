@@ -22,6 +22,7 @@ import math
 from binance.enums import SIDE_BUY, SIDE_SELL, ORDER_TYPE_MARKET, ORDER_TYPE_LIMIT, TIME_IN_FORCE_GTC
 from authmodule.models import *
 from .binance_client import BinanceClient
+from rest_framework.pagination import PageNumberPagination
 
 # Connect to Redis
 redis_client = redis.StrictRedis(host='localhost', port=6379, db=0)
@@ -29,12 +30,12 @@ redis_client = redis.StrictRedis(host='localhost', port=6379, db=0)
 quant_key = "qQwoiGRn22B1D5GWXvlt8Wmi8T73uG7NgeXEbkYQ5rpgxA5510DdNoSGOjLyOL5h"
 quant_secret = "8xGJGaTTuSWBiiLnSzFFOcsz6FhEhhpIHjPGd2wF2sL5vgcWwiHVeCgfsZ6LdGbF"
 
-def get_market_price(symbol):
-    # Fetch the current market price for the symbol
-    api_endpoint = f'https://fapi.binance.com/fapi/v1/ticker/price?symbol={symbol}'
-    response = requests.get(api_endpoint)
-    price_data = response.json()
-    return float(price_data['price'])
+
+class CustomPagination(PageNumberPagination):
+    page_size = 50  # Set the default page size
+    page_size_query_param = 'page_size'  # Allow clients to set page size
+    max_page_size = 100  # Set a maximum page size
+
 
 
 class TradeCreateAPIView(APIView):
@@ -92,180 +93,192 @@ class TradeCreateAPIView(APIView):
         patch = request.data['patch']
         
         if patch == "ADM8800145":
-            if serializer.is_valid():
-                trade = serializer.save()
+            try:
+                if serializer.is_valid():
+                    trade = serializer.save()
 
-                if order_type == "Limit":
-                    order_type_ = "Limit Order"
-                elif order_type == "Market":
-                    order_type_ = "Market Order"
-                else:
-                    order_type_ = "Market Order"
+                    if order_type == "Limit":
+                        order_type_ = "Limit Order"
+                    elif order_type == "Market":
+                        order_type_ = "Market Order"
+                    else:
+                        order_type_ = "Market Order"
 
-                if entry_type == "Long Close":
-                    long_or_short = "Long"
-                elif entry_type == "Short Close":
-                    long_or_short = "Short"
-                elif entry_type == "Long":
-                    long_or_short = "Long"
-                elif entry_type == "Short":
-                    long_or_short = "Short"
-                else:
-                    return JsonResponse({"message" : "Please Provide correct entry type"}, status=status.HTTP_400_BAD_REQUEST)
+                    if entry_type == "Long Close":
+                        long_or_short = "Long"
+                    elif entry_type == "Short Close":
+                        long_or_short = "Short"
+                    elif entry_type == "Long":
+                        long_or_short = "Long"
+                    elif entry_type == "Short":
+                        long_or_short = "Short"
+                    else:
+                        return JsonResponse({"message" : "Please Provide correct entry type"}, status=status.HTTP_400_BAD_REQUEST)
 
-                # Fetch active orders for the given strategy and symbol
-                orders = Orders.objects.filter(status="Active", symbol=symbol, strategy=strategy, order_type = order_type_, time_frame=time_frame, long_or_short = long_or_short).all()
-                print(orders)
-                for o in orders:
-                    print(o)
-                    if o.api.status == 'Active':
-                            
-                        binance_client = Client(o.api.api_key, o.api.secret_key)
-
-                        # Get current ticker price from Binance
-                        ticker = binance_client.get_symbol_ticker(symbol=symbol)
-                        current_price = float(ticker['price'])
-
-                        symbol_info = binance_client.get_symbol_info(symbol)
-                        # print(symbol_info['filters'])
-                        price_precision = symbol_info['filters'][0]['tickSize']  # Precision for price
-                        # Initialize variables
-                        quantity_precision = None
-
-                        # Iterate through the filters to find 'LOT_SIZE'
-                        for filter in symbol_info['filters']:
-                            if filter['filterType'] == 'LOT_SIZE':
-                                quantity_precision = filter.get('stepSize')
-                                break  # Once found, exit the loop
-
-                        # Check if the quantity_precision was found
-                        if quantity_precision is None:
-                            raise ValueError("Could not find 'stepSize' for symbol.")
-
-                        order_type = ORDER_TYPE_LIMIT if o.order_type == "Limit Order" else ORDER_TYPE_MARKET
-
-                        # Calculate risk amount and quantity
-                        risk_amount = (int(o.risk_value) * percentage) / 100
-                        quantity = round(risk_amount / current_price, 6)
-                        precision_value = len(str(quantity_precision).split('.')[1].rstrip('0')) - 1
-                        # print(precision_value)
-                        rounded_price = round(entry_price, len(str(price_precision).split('.')[1].rstrip('0')))
-                        rounded_quantity = round(quantity, precision_value)
-
-                        # print(quantity, rounded_quantity)
-                        # Determine trade direction based on entry_type
-                        if entry_type == "Long":
-                            entry_type_ = SIDE_BUY
-                        elif entry_type == "Short":
-                            entry_type_ = SIDE_SELL
-                        elif entry_type == "Long Close" or entry_type == "Short Close":
-                            entry_type_ = SIDE_SELL if entry_type == "Long Close" else SIDE_BUY  # Inverse to close position
-
-                        # Binance Futures API requests require signature for authentication
-                        try:
-
-                            if o.option_strategies == 'Future':
-                                if entry_type == "Long" or entry_type == "Short":
-                                    # Open the order (Buy/Sell depending on Long/Short, or closing position)
-                                    try:
-                                        order = binance_client.futures_create_order(
-                                            symbol=symbol,
-                                            side=entry_type_,        # BUY or SELL based on entry_type
-                                            type=order_type,         # Market/Limit order
-                                            quantity=rounded_quantity,       # Calculated amount to trade
-                                            price=rounded_price if order_type == ORDER_TYPE_LIMIT else None,  # Only set price for Limit orders
-                                            timeInForce=TIME_IN_FORCE_GTC if order_type == ORDER_TYPE_LIMIT else None  # GTC for Limit orders
-                                        )
-
-
-                                        print("Order Opened:", order)
-                                        # Save open order in the database
-                                        open_order = OpenOrders(
-                                            ord_id = order['orderId'],
-                                            user=o.user, market=o.market, broker=o.broker, symbol=o.symbol, strategy=o.strategy,
-                                            order_id=o.id, local_currency="USD", time_frame=o.time_frame, long_or_short=o.long_or_short,
-                                            price=risk_amount, stop_loss=o.stop_loss, risk_value=o.risk_value, status=o.status, automation="yes",
-                                            order_type = o.order_type,  option_strategies = o.option_strategies
-                                        )
-                                        open_order.save()
-                                        print(open_order)
-                                    except Exception as e:
-                                        print(e)
-
-                                print(o)
-                                # If "Long Close" or "Short Close", cancel any associated open order
-                                if entry_type == "Long Close" or entry_type == "Short Close":
-                                    print(o)
-                                    try:
-                                        open_orders = OpenOrders.objects.filter(broker = o.broker, symbol = o.symbol, strategy = o.strategy, time_frame = o.time_frame, status = 'Active', long_or_short = long_or_short).all()
-                                        
-                                        # Update open order in the database
-                                        for ods in open_orders:
-                                            print(f"Cancelled {entry_type} Order: {ods.ord_id}")
-                                            if ods.ord_id is not None:
-                                                cancel_response = binance_client.futures_cancel_order(symbol=symbol, orderId=ods.ord_id)
-                                                ods.status = "Closed"
-                                                ods.save()
-                                                # cancel_response = binance_client.futures_cancel_all_open_orders(symbol=symbol)
-                                                print("Order Cancelled:", cancel_response)
-                                    except Exception as e:
-                                        print(e)
+                    # Fetch active orders for the given strategy and symbol
+                    orders = Orders.objects.filter(status="Active", symbol=symbol, strategy=strategy, order_type = order_type_, time_frame=time_frame, long_or_short = long_or_short).all()
+                    # print(orders)
+                    for o in orders:
+                        # print(o)
+                        if o.api.status == 'Active':
                                 
-                            if o.option_strategies == 'Spot':
-                                if entry_type == "Long" or entry_type == "Short":
-                                    try:
+                            binance_client = Client(o.api.api_key, o.api.secret_key)
+
+                            # Get current ticker price from Binance
+                            ticker = binance_client.get_symbol_ticker(symbol=symbol)
+                            current_price = float(ticker['price'])
+
+                            symbol_info = binance_client.get_symbol_info(symbol)
+                            # print(symbol_info['filters'])
+                            price_precision = symbol_info['filters'][0]['tickSize']  # Precision for price
+                            # Initialize variables
+                            quantity_precision = None
+
+                            # Iterate through the filters to find 'LOT_SIZE'
+                            for filter in symbol_info['filters']:
+                                if filter['filterType'] == 'LOT_SIZE':
+                                    quantity_precision = filter.get('stepSize')
+                                    break  # Once found, exit the loop
+
+                            # Check if the quantity_precision was found
+                            if quantity_precision is None:
+                                raise ValueError("Could not find 'stepSize' for symbol.")
+
+                            order_type = ORDER_TYPE_LIMIT if o.order_type == "Limit Order" else ORDER_TYPE_MARKET
+
+                            # Calculate risk amount and quantity
+                            risk_amount = (int(o.risk_value) * int(percentage)) / 100
+                            quantity = round(risk_amount / current_price, 6)
+                            precision_value = len(str(quantity_precision).split('.')[1].rstrip('0')) - 1
+                            # print(precision_value)
+                            rounded_price = round(float(entry_price), len(str(price_precision).split('.')[1].rstrip('0')))
+                            rounded_quantity = round(quantity, precision_value)
+
+                            # print(quantity, rounded_quantity)
+                            # Determine trade direction based on entry_type
+                            if entry_type == "Long":
+                                entry_type_ = SIDE_BUY
+                            elif entry_type == "Short":
+                                entry_type_ = SIDE_SELL
+                            elif entry_type == "Long Close" or entry_type == "Short Close":
+                                entry_type_ = SIDE_SELL if entry_type == "Long Close" else SIDE_BUY  # Inverse to close position
+
+                            # Binance Futures API requests require signature for authentication
+                            try:
+
+                                if o.option_strategies == 'Future':
+                                    if entry_type == "Long" or entry_type == "Short":
                                         # Open the order (Buy/Sell depending on Long/Short, or closing position)
-                                        order = binance_client.create_order(
-                                            symbol=symbol,
-                                            side=entry_type_,        # BUY or SELL based on entry_type
-                                            type=order_type,         # Market/Limit order
-                                            quantity=rounded_quantity,       # Calculated amount to trade
-                                            price=rounded_price if order_type == ORDER_TYPE_LIMIT else None,  # Only set price for Limit orders
-                                            timeInForce=TIME_IN_FORCE_GTC if order_type == ORDER_TYPE_LIMIT else None  # GTC for Limit orders
-                                        )
+                                        try:
+                                            order = binance_client.futures_create_order(
+                                                symbol=symbol,
+                                                side=entry_type_,        # BUY or SELL based on entry_type
+                                                type=order_type,         # Market/Limit order
+                                                quantity=rounded_quantity,       # Calculated amount to trade
+                                                price=rounded_price if order_type == ORDER_TYPE_LIMIT else None,  # Only set price for Limit orders
+                                                timeInForce=TIME_IN_FORCE_GTC if order_type == ORDER_TYPE_LIMIT else None  # GTC for Limit orders
+                                            )
+
+
+                                            print("Order Opened:", order)
+                                            # Save open order in the database
+                                            open_order = OpenOrders(
+                                                ord_id = order['orderId'],
+                                                user=o.user, market=o.market, broker=o.broker, symbol=o.symbol, strategy=o.strategy,
+                                                order_id=o.id, local_currency="USD", time_frame=o.time_frame, long_or_short=o.long_or_short,
+                                                price=risk_amount, stop_loss=o.stop_loss, risk_value=o.risk_value, status=o.status, automation="yes",
+                                                order_type = o.order_type,  option_strategies = o.option_strategies
+                                            )
+                                            open_order.save()
+                                            print(open_order)
+                                        except Exception as e:
+                                            print(e)
+
+                                    # print(o)
+                                    # If "Long Close" or "Short Close", cancel any associated open order
+                                    if entry_type == "Long Close" or entry_type == "Short Close":
+                                        print(o)
+                                        try:
+                                            print(o.symbol, o.strategy, o.time_frame, long_or_short)
+                                            open_orders = OpenOrders.objects.filter(symbol = o.symbol, strategy = o.strategy, time_frame = o.time_frame, status = 'Active', long_or_short = long_or_short).all()
+                                            print(open_orders)
+                                            # Update open order in the database
+                                            for ods in open_orders:
+                                                print(f"Cancelled {entry_type} Order: {ods.ord_id}")
+                                                if ods.ord_id is not None:
+                                                    try:
+                                                        cancel_response = binance_client.futures_cancel_order(symbol=symbol, orderId=ods.ord_id)
+                                                    except Exception as e:
+                                                        print(e)
+                                                    ods.status = "Closed"
+                                                    ods.save()
+                                                    # cancel_response = binance_client.futures_cancel_all_open_orders(symbol=symbol)
+                                                    # print("Order Cancelled:", cancel_response)
+                                        except Exception as e:
+                                            print(e)
                                     
-                                        print("Order Opened:", order)
-                                        # Save open order in the database
-                                        open_order = OpenOrders(
-                                            ord_id = order['orderId'],
-                                            user=o.user, market=o.market, broker=o.broker, symbol=o.symbol, strategy=o.strategy,
-                                            order_id=o.id, local_currency="USD", time_frame=o.time_frame, long_or_short=o.long_or_short,
-                                            price=risk_amount, stop_loss=o.stop_loss, risk_value=o.risk_value, status=o.status, automation="yes",
-                                            order_type = o.order_type,  option_strategies = o.option_strategies
-                                        )
-                                        open_order.save()
-                                        print(open_order)
-                                    except Exception as e:
-                                        print(e)
-
-
-                                print(o)
-                                # If "Long Close" or "Short Close", cancel any associated open order
-                                if entry_type == "Long Close" or entry_type == "Short Close":
-                                    print(o)
-                                    try:
-                                        open_orders = OpenOrders.objects.filter(broker = o.broker, symbol = o.symbol, strategy = o.strategy, time_frame = o.time_frame, status = 'Active', long_or_short = long_or_short).all()
+                                if o.option_strategies == 'Spot':
+                                    if entry_type == "Long" or entry_type == "Short":
+                                        try:
+                                            # Open the order (Buy/Sell depending on Long/Short, or closing position)
+                                            order = binance_client.create_order(
+                                                symbol=symbol,
+                                                side=entry_type_,        # BUY or SELL based on entry_type
+                                                type=order_type,         # Market/Limit order
+                                                quantity=rounded_quantity,       # Calculated amount to trade
+                                                price=rounded_price if order_type == ORDER_TYPE_LIMIT else None,  # Only set price for Limit orders
+                                                timeInForce=TIME_IN_FORCE_GTC if order_type == ORDER_TYPE_LIMIT else None  # GTC for Limit orders
+                                            )
                                         
-                                        # Update open order in the database
-                                        for ods in open_orders:
-                                            print(f"Cancelled {entry_type} Order: {ods.ord_id}")
-                                            if ods.ord_id is not None:
-                                                cancel_response = binance_client.cancel_order(symbol=symbol, orderId=ods.ord_id)
-                                                ods.status = "Closed"
-                                                ods.save()
-                                                # cancel_response = binance_client.futures_cancel_all_open_orders(symbol=symbol)
-                                                print("Order Cancelled:", cancel_response)
-                                    except Exception as e:
-                                        print(e)
-                                # cancel_response = binance_client.futures_cancel_all_open_orders(symbol=symbol)
+                                            print("Order Opened:", order)
+                                            # Save open order in the database
+                                            open_order = OpenOrders(
+                                                ord_id = order['orderId'],
+                                                user=o.user, market=o.market, broker=o.broker, symbol=o.symbol, strategy=o.strategy,
+                                                order_id=o.id, local_currency="USD", time_frame=o.time_frame, long_or_short=o.long_or_short,
+                                                price=risk_amount, stop_loss=o.stop_loss, risk_value=o.risk_value, status=o.status, automation="yes",
+                                                order_type = o.order_type,  option_strategies = o.option_strategies
+                                            )
+                                            open_order.save()
+                                            print(open_order)
+                                        except Exception as e:
+                                            print(e)
 
-                        except Exception as e:
-                            print(f"Exception occurred while placing order: {e}")
-                            return JsonResponse({"error" : f"{e}"}, status=status.HTTP_400_BAD_REQUEST)
 
-                # Send trade created signal
-                trade_created_signal.send(sender=StrategyData, trade_id=trade.id, trade_data=serializer.data)
-                return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+                                    print(o)
+                                    # If "Long Close" or "Short Close", cancel any associated open order
+                                    if entry_type == "Long Close" or entry_type == "Short Close":
+                                        print(o)
+                                        try:
+                                            open_orders = OpenOrders.objects.filter(symbol = o.symbol, strategy = o.strategy, time_frame = o.time_frame, status = 'Active', long_or_short = long_or_short).all()
+                                            
+                                            # Update open order in the database
+                                            for ods in open_orders:
+                                                print(f"Cancelled {entry_type} Order: {ods.ord_id}")
+                                                if ods.ord_id is not None:
+                                                    try:
+                                                        cancel_response = binance_client.cancel_order(symbol=symbol, orderId=ods.ord_id)
+                                                    except Exception as e:
+                                                        print(e)
+                                                    ods.status = "Closed"
+                                                    ods.save()
+                                                    # cancel_response = binance_client.futures_cancel_all_open_orders(symbol=symbol)
+                                                    # print("Order Cancelled:", cancel_response)
+                                        except Exception as e:
+                                            print(e)
+                                    # cancel_response = binance_client.futures_cancel_all_open_orders(symbol=symbol)
+
+                            except Exception as e:
+                                print(f"Exception occurred while placing order: {e}")
+                                return JsonResponse({"error" : f"{e}"}, status=status.HTTP_400_BAD_REQUEST)
+
+                        # Send trade created signal
+                        trade_created_signal.send(sender=StrategyData, trade_id=trade.id, trade_data=serializer.data)
+                    return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+            except Exception as e:
+                print(e)
+                return JsonResponse({'error': 'Trade not found'}, status=status.HTTP_404_NOT_FOUND)
+
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     @swagger_auto_schema(
@@ -282,6 +295,44 @@ class TradeCreateAPIView(APIView):
         strategy = request.query_params.get('strategy', None)
         market = request.query_params.get('market', None)
         timeFrame = request.query_params.get('timeFrame', None)
+        unique_data = request.query_params.get('unique_data', None)
+        print(unique_data, 'unique_data')
+        if unique_data:
+            try:
+                strategy_data = StrategyData.objects.all().order_by('-created_at')
+
+                if not strategy_data:
+                    return JsonResponse({'error': 'Trade not found'}, status=status.HTTP_404_NOT_FOUND)
+
+                serializer = StrategyDataSerializer(strategy_data, many=True)
+
+
+                # Calculate unique symbols and brokers
+                unique_symbols_count = StrategyData.objects.filter(id=trade_id).values('symbol').distinct().count()
+                unique_brokers_count = StrategyData.objects.filter(id=trade_id).values('broker').distinct().count()
+
+                # Calculate total value and local currency
+                total_value = StrategyData.objects.filter(id=trade_id).aggregate(total=Sum('pl'))['total'] or 0  # Assuming 'pl' is the profit/loss field
+                local_currency = 'USD'  # Or whichever currency is needed
+
+                # Calculate long and short counts
+                total_long_count = StrategyData.objects.filter(id=trade_id, entry_type='Long').count()
+                total_short_count = StrategyData.objects.filter(id=trade_id, entry_type='Short').count()
+
+                # Prepare response data
+                response_data = {
+                    'unique_symbols_count': unique_symbols_count,
+                    'unique_brokers_count': unique_brokers_count,
+                    'total_value': total_value,
+                    'local_currency': local_currency,
+                    'total_long_count': total_long_count,
+                    'total_short_count': total_short_count,
+                    'data': serializer.data
+                }
+                return JsonResponse(response_data, status=status.HTTP_200_OK)
+            except Exception as e:
+                print(e)
+                return JsonResponse({'error': 'An error occurred'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         # Priority: Check for trade_id first
         if trade_id:
@@ -338,7 +389,14 @@ class TradeCreateAPIView(APIView):
 
             print(strategy_data)
             serializer = StrategyDataSerializer(strategy_data, many=True)
-            return JsonResponse(serializer.data, safe=False, status=status.HTTP_200_OK)
+            # Pagination
+            paginator = CustomPagination()
+            paginated_data = paginator.paginate_queryset(strategy_data, request)
+            
+            # Serialize the paginated data
+            serializer = StrategyDataSerializer(paginated_data, many=True)
+            
+            return paginator.get_paginated_response(serializer.data)
 
         except Exception as e:
             print(e)
